@@ -33,7 +33,7 @@ class Product(Model):
     business = fields.ForeignKeyField("models.Business", related_name="products")
 
 user_pydantic = pydantic_model_creator(User, name="User", exclude=("is_verified", ))
-user_pydanticIN = pydantic_model_creator(User, name="UserIn", exclude_readonly=True,exclude=("is_verified","join_date"))
+user_pydanticIn = pydantic_model_creator(User, name="UserIn", exclude_readonly=True,exclude=("is_verified","join_date"))
 user_pydanticOUT = pydantic_model_creator(User, name="UserOUT", exclude=("password", ))
 
 business_pydantic = pydantic_model_creator(Business, name="Business")
